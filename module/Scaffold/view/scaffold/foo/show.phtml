@@ -1,5 +1,5 @@
 <?php /** @var $this \Zend\View\Renderer\PhpRenderer */ ?>
-<?php /** @var $id int */ ?>
+<?php /** @var $foo \Scaffold\Model\Foo */ ?>
 
 <h1>Show @foo</h1>
 <hr>
@@ -13,7 +13,7 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <td><?php echo $id; ?></td>
+                <td><?php echo $foo->id; ?></td>
             </tr>
             </thead>
 
