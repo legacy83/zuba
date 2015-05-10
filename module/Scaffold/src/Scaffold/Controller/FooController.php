@@ -33,6 +33,10 @@ class FooController extends AbstractActionController
 
     public function destroyAction()
     {
+        if ($this->params()->fromPost()) {
+            die('destroyed');
+        }
+
         $foo = Foo::buildFromId(
             $this->params()->fromQuery( 'id' )
         );

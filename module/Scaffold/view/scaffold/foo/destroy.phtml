@@ -4,50 +4,46 @@
 <h1>Destroy @foo</h1>
 <hr>
 
-<div class="row">
+<form action="<?php echo $this->url( '@foo', array( 'action' => 'destroy' ), array( 'query' => array( 'id' => $foo->id ) ) ); ?>" method="post">
 
-    <div class="col-md-8">
+    <div class="row">
 
-        <table class="table table-hover table-bordered">
+        <div class="col-md-8">
 
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th><?php echo $foo->id; ?></th>
-            </tr>
-            </thead>
+            <table class="table table-hover table-bordered">
 
-            <tbody>
-            <tr>
-                <th>@one</th>
-                <td>@one</td>
-            </tr>
-            <tr>
-                <th>@two</th>
-                <td>@two</td>
-            </tr>
-            <tr>
-                <th>@three</th>
-                <td>@three</td>
-            </tr>
-            </tbody>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th><?php echo $foo->id; ?></th>
+                </tr>
+                </thead>
 
-        </table>
+                <tbody>
+                <tr>
+                    <th>@one</th>
+                    <td>@one</td>
+                </tr>
+                <tr>
+                    <th>@two</th>
+                    <td>@two</td>
+                </tr>
+                <tr>
+                    <th>@three</th>
+                    <td>@three</td>
+                </tr>
+                </tbody>
 
-    </div>
+            </table>
 
-    <div class="col-md-4">
+        </div>
 
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="col-md-4">
 
-                <form
-                    method="post"
-                    action="<?php echo $this->url( '@foo' ); ?>">
+            <div class="panel panel-default">
+                <div class="panel-body">
 
                     <p>Are you sure about destroying @foo?</p>
-
-                    <input type="hidden" name="id" value="<?php echo $foo->id; ?>">
 
                     <div class="pull-left"></div>
 
@@ -58,7 +54,7 @@
 
                     </div>
 
-                </form>
+                </div>
 
             </div>
 
@@ -66,6 +62,4 @@
 
     </div>
 
-</div>
-
-
+</form>
