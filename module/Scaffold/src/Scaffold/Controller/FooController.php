@@ -11,4 +11,11 @@ class FooController extends AbstractActionController
     {
         return new ViewModel();
     }
+
+    public function showAction()
+    {
+        return new ViewModel( array(
+            'id' => $this->params()->fromQuery( 'id' )
+        ) );
+    }
 }

@@ -1,0 +1,63 @@
+<?php /** @var $this \Zend\View\Renderer\PhpRenderer */ ?>
+<?php /** @var $id int */ ?>
+
+<h1>Show @foo</h1>
+<hr>
+
+<div class="row">
+
+    <div class="col-md-9">
+
+        <table class="table table-hover table-bordered">
+
+            <thead>
+            <tr>
+                <th>ID</th>
+                <td><?php echo $id; ?></td>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <th>@one</th>
+                <td>@one</td>
+            </tr>
+            <tr>
+                <th>@two</th>
+                <td>@two</td>
+            </tr>
+            <tr>
+                <th>@three</th>
+                <td>@three</td>
+            </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <div class="pull-left">
+
+                    <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove">Destroy</a>
+
+                </div>
+
+                <div class="pull-right">
+
+                    <a class="btn btn-primary" href="#"><span class="glyphicon glyphicon-edit">Edit</a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+

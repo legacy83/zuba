@@ -36,13 +36,16 @@ return array(
             ),
 
             /*
-             * -- @todo_
+             * -- @foo_
              */
 
             '@foo' => array(
-                'type' => 'Literal',
+                'type' => 'Segment',
                 'options' => array(
-                    'route' => '/@foo',
+                    'route' => '/@foo[/:action]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    ),
                     'defaults' => array(
                         'controller' => 'Scaffold\Controller\Foo',
                         'action' => 'index',
