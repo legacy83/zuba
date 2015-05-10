@@ -1,0 +1,8 @@
+{
+  "name": "trsenna/zuba",
+  "description": "Just one more custom ZF2 starter application",
+  "require": {
+    "php": ">=5.5.9",
+    "zendframework/zendframework": "~2.4"
+  }
+}
