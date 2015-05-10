@@ -30,4 +30,15 @@ class FooController extends AbstractActionController
             'foo' => $foo
         ) );
     }
+
+    public function destroyAction()
+    {
+        $foo = Foo::buildFromId(
+            $this->params()->fromQuery( 'id' )
+        );
+
+        return new ViewModel( array(
+            'foo' => $foo
+        ) );
+    }
 }

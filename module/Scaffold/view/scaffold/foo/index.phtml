@@ -32,13 +32,9 @@
                     <td>@three</td>
                     <td>
 
-                        <?php
-                        $showUrl = $this->url( '@foo', array( 'action' => 'show' ), array( 'query' => array( 'id' => $foo->id ) ) );
-                        ?>
-
-                        <a href="<?php echo $showUrl; ?>"><span class="glyphicon glyphicon-link"></span></a>
+                        <a href="<?php echo $this->url( '@foo', array( 'action' => 'show' ), array( 'query' => array( 'id' => $foo->id ) ) ); ?>"><span class="glyphicon glyphicon-link"></span></a>
                         <a href="#"><span class="glyphicon glyphicon-edit"></span></a>
-                        <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                        <a href="<?php echo $this->url( '@foo', array( 'action' => 'destroy' ), array( 'query' => array( 'id' => $foo->id ) ) ); ?>"><span class="glyphicon glyphicon-remove"></span></a>
 
                     </td>
                 </tr>
