@@ -10,7 +10,14 @@ class FooController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        $foos = array();
+        foreach ( range( 1, 6 ) as $id ) {
+            $foos[ ] = Foo::buildFromId( $id );
+        }
+
+        return new ViewModel( array(
+            'foos' => $foos,
+        ) );
     }
 
     public function showAction()

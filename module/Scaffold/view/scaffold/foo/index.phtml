@@ -1,4 +1,6 @@
 <?php /** @var $this \Zend\View\Renderer\PhpRenderer */ ?>
+<?php /** @var $foo \Scaffold\Model\Foo */ ?>
+<?php /** @var $foos array */ ?>
 
 <h1>@foo</h1>
 <hr>
@@ -21,17 +23,23 @@
 
             <tbody>
 
-            <?php foreach ( range( 1, 6 ) as $modelId ) : ?>
+            <?php foreach ( $foos as $foo ) : ?>
 
                 <tr>
-                    <td><?php echo $modelId; ?></td>
+                    <td><?php echo $foo->id; ?></td>
                     <td>@one</td>
                     <td>@two</td>
                     <td>@three</td>
                     <td>
-                        <a href="<?php echo $this->url( '@foo', array( 'action' => 'show' ), array( 'query' => array( 'id' => $modelId ) ) ) ?>"><span class="glyphicon glyphicon-link"></span></a>
+
+                        <?php
+                        $showUrl = $this->url( '@foo', array( 'action' => 'show' ), array( 'query' => array( 'id' => $foo->id ) ) );
+                        ?>
+
+                        <a href="<?php echo $showUrl; ?>"><span class="glyphicon glyphicon-link"></span></a>
                         <a href="#"><span class="glyphicon glyphicon-edit"></span></a>
                         <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+
                     </td>
                 </tr>
 
@@ -52,7 +60,7 @@
 
                 <div class="pull-right">
 
-                    <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> New @foo</a>
+                    <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New @foo</a>
 
                 </div>
 
