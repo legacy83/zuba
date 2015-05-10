@@ -1,2 +1,4 @@
+# - Configuration Ignores
+# -----------------------------------------
 local.php
 *.local.php
