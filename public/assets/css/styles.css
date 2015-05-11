@@ -7,3 +7,7 @@ div.container a.brand {
     background: url("../images/zf2-logo.png") no-repeat scroll 0 10px transparent;
     padding: 15px 20px 15px 40px;
 }
+
+.alert-default {
+    border-color: #ddd;
+}

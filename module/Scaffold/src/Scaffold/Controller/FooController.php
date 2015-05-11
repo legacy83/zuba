@@ -34,6 +34,7 @@ class FooController extends AbstractActionController
     public function destroyAction()
     {
         if ( $this->params()->fromPost( 'destroySubmitYes' ) ) {
+            $this->flashMessenger()->addSuccessMessage( '@foo destroyed successfully' );
             $this->redirect()->toRoute( '@foo' );
         }
 

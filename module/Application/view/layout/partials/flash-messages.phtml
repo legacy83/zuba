@@ -1,0 +1,46 @@
+<?php /** @var $this \Zend\View\Renderer\PhpRenderer */ ?>
+
+<?php if ( $this->flashMessenger( 'error' ) ) : ?>
+
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php echo $this->flashMessenger()->render( 'error' ); ?>
+    </div>
+
+<?php endif; ?>
+
+<?php if ( $this->flashMessenger( 'warning' ) ) : ?>
+
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php echo $this->flashMessenger()->render( 'warning' ); ?>
+    </div>
+
+<?php endif; ?>
+
+<?php if ( $this->flashMessenger( 'info' ) ) : ?>
+
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php echo $this->flashMessenger()->render( 'info' ); ?>
+    </div>
+
+<?php endif; ?>
+
+<?php if ( $this->flashMessenger( 'success' ) ) : ?>
+
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php echo $this->flashMessenger()->render( 'success' ); ?>
+    </div>
+
+<?php endif; ?>
+
+<?php if ( $this->flashMessenger( 'default' ) ) : ?>
+
+    <div class="alert alert-default alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php echo $this->flashMessenger()->render( 'default' ); ?>
+    </div>
+
+<?php endif; ?>
