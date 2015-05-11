@@ -31,6 +31,20 @@ class FooController extends AbstractActionController
         ) );
     }
 
+    public function createAction()
+    {
+        if ( $this->params()->fromPost( 'createSubmitCreate' ) ) {
+            $this->flashMessenger()->addSuccessMessage( '@foo created successfully' );
+            $this->redirect()->toRoute( '@foo' );
+        }
+
+        if ( $this->params()->fromPost( 'createSubmitCancel' ) ) {
+            $this->redirect()->toRoute( '@foo' );
+        }
+
+        return new ViewModel();
+    }
+
     public function destroyAction()
     {
         if ( $this->params()->fromPost( 'destroySubmitYes' ) ) {
