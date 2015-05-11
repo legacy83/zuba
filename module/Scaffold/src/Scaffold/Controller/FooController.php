@@ -33,8 +33,12 @@ class FooController extends AbstractActionController
 
     public function destroyAction()
     {
-        if ($this->params()->fromPost()) {
-            die('destroyed');
+        if ( $this->params()->fromPost( 'destroySubmitYes' ) ) {
+            $this->redirect()->toRoute( '@foo' );
+        }
+
+        if ( $this->params()->fromPost( 'destroySubmitNo' ) ) {
+            $this->redirect()->toRoute( '@foo' );
         }
 
         $foo = Foo::buildFromId(

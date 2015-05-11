@@ -4,7 +4,9 @@
 <h1>Destroy @foo</h1>
 <hr>
 
-<form action="<?php echo $this->url( '@foo', array( 'action' => 'destroy' ), array( 'query' => array( 'id' => $foo->id ) ) ); ?>" method="post">
+<form action="<?php echo $this->url( '@foo', array( 'action' => 'destroy' ) ); ?>" method="post">
+
+    <input type="hidden" name="id" value="<?php echo $foo->id; ?>">
 
     <div class="row">
 
@@ -49,8 +51,8 @@
 
                     <div class="pull-right">
 
-                        <input type="submit" class="btn btn-default" name="destroySubmit" value="No">
-                        <input type="submit" class="btn btn-danger" name="destroySubmit" value="Yes">
+                        <input type="submit" class="btn btn-default" name="destroySubmitNo" value="No">
+                        <input type="submit" class="btn btn-danger" name="destroySubmitYes" value="Yes">
 
                     </div>
 
