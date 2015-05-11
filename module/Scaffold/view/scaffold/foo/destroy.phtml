@@ -1,8 +1,9 @@
 <?php /** @var $this \Zend\View\Renderer\PhpRenderer */ ?>
 <?php /** @var $foo \Scaffold\Model\Foo */ ?>
 
-<h1>Destroy @foo</h1>
-<hr>
+<div class="page-header">
+    <h1>Destroy @foo</h1>
+</div>
 
 <form action="<?php echo $this->url( '@foo', array( 'action' => 'destroy' ) ); ?>" method="post">
 
