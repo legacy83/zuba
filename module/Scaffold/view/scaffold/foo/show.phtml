@@ -47,7 +47,7 @@
                 <div class="pull-right">
 
                     <a class="btn btn-default" href="<?php echo $this->url( '@foo' ); ?>">Cancel</a>
-                    <a class="btn btn-primary" href="#">Edit</a>
+                    <a class="btn btn-primary" href="<?php echo $this->url( '@foo', array( 'action' => 'edit' ), array( 'query' => array( 'id' => $foo->id ) ) ); ?>">Edit</a>
 
                 </div>
 
