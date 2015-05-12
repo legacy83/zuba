@@ -45,6 +45,26 @@ class FooController extends AbstractActionController
         return new ViewModel();
     }
 
+    public function editAction()
+    {
+        if ( $this->params()->fromPost( 'editSubmitSave' ) ) {
+            $this->flashMessenger()->addSuccessMessage( '@foo modified successfully' );
+            $this->redirect()->toRoute( '@foo' );
+        }
+
+        if ( $this->params()->fromPost( 'editSubmitCancel' ) ) {
+            $this->redirect()->toRoute( '@foo' );
+        }
+
+        $foo = Foo::buildFromId(
+            $this->params()->fromQuery( 'id' )
+        );
+
+        return new ViewModel( array(
+            'foo' => $foo
+        ) );
+    }
+
     public function destroyAction()
     {
         if ( $this->params()->fromPost( 'destroySubmitYes' ) ) {
