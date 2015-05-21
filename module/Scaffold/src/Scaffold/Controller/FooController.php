@@ -16,7 +16,7 @@ class FooController extends AbstractActionController
         }
 
         return new ViewModel( array(
-            'foos' => $foos,
+            'models' => $foos,
         ) );
     }
 
@@ -27,7 +27,7 @@ class FooController extends AbstractActionController
         );
 
         return new ViewModel( array(
-            'foo' => $foo
+            'model' => $foo
         ) );
     }
 
@@ -61,7 +61,7 @@ class FooController extends AbstractActionController
         );
 
         return new ViewModel( array(
-            'foo' => $foo
+            'model' => $foo
         ) );
     }
 
@@ -81,7 +81,7 @@ class FooController extends AbstractActionController
         );
 
         return new ViewModel( array(
-            'foo' => $foo
+            'model' => $foo
         ) );
     }
 }

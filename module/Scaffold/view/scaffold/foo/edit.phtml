@@ -1,5 +1,5 @@
 <?php /** @var $this \Zend\View\Renderer\PhpRenderer */ ?>
-<?php /** @var $foo \Scaffold\Model\Foo */ ?>
+<?php /** @var $model \Scaffold\Model\Foo */ ?>
 
 <div class="page-header">
     <h1>Edit @foo</h1>
@@ -7,7 +7,7 @@
 
 <form class="form-horizontal" action="<?php echo $this->url( '@foo', array( 'action' => 'edit' ) ); ?>" method="post">
 
-    <input type="hidden" name="id" value="<?php echo $this->escapeHtmlAttr( $foo->id ); ?>">
+    <input type="hidden" name="id" value="<?php echo $this->escapeHtmlAttr( $model->id ); ?>">
 
     <div class="row">
 

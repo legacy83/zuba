@@ -1,5 +1,5 @@
 <?php /** @var $this \Zend\View\Renderer\PhpRenderer */ ?>
-<?php /** @var $foo \Scaffold\Model\Foo */ ?>
+<?php /** @var $model \Scaffold\Model\Foo */ ?>
 
 <div class="page-header">
     <h1>Show @foo</h1>
@@ -14,7 +14,7 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th><?php echo $foo->id; ?></th>
+                <th><?php echo $this->escapeHtml( $model->id ); ?></th>
             </tr>
             </thead>
 
@@ -47,7 +47,7 @@
                 <div class="pull-right">
 
                     <a class="btn btn-default" href="<?php echo $this->url( '@foo' ); ?>">Cancel</a>
-                    <a class="btn btn-primary" href="<?php echo $this->url( '@foo', array( 'action' => 'edit' ), array( 'query' => array( 'id' => $foo->id ) ) ); ?>">Edit</a>
+                    <a class="btn btn-primary" href="<?php echo $this->url( '@foo', array( 'action' => 'edit' ), array( 'query' => array( 'id' => $model->id ) ) ); ?>">Edit</a>
 
                 </div>
 
@@ -56,7 +56,7 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     Would you like to destroy @foo?
-                    <a class="text-danger" href="<?php echo $this->url( '@foo', array( 'action' => 'destroy' ), array( 'query' => array( 'id' => $foo->id ) ) ); ?>">Yes!</a>
+                    <a class="text-danger" href="<?php echo $this->url( '@foo', array( 'action' => 'destroy' ), array( 'query' => array( 'id' => $model->id ) ) ); ?>">Yes!</a>
                 </li>
             </ul>
 
