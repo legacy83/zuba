@@ -26,8 +26,3 @@ echo "$mySQLCreateDB" | bash -s "zuba"
 
 rm -rf "/var/www/www.$domain/public_html"
 ln -s /vagrant/public "/var/www/www.$domain/public_html"
-
-# -- App Install/Update
-# =========================================
-cd /vagrant/ && composer install
-cd /vagrant/ && composer update
