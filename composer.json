@@ -1,6 +1,6 @@
 {
   "name": "trsenna/zuba",
-  "description": "Just one more custom ZF2 starter application",
+  "description": "Zuba Project Template is a skeleton ZF2 application best for rapidly creating amazing and well done projects.",
   "require": {
     "php": ">=5.5.9",
     "zendframework/zendframework": "~2.4"
